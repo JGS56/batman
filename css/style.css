@@ -1,0 +1,441 @@
+body {
+  background-color: #0A090A;
+  color: #fff;
+  font-family: Roboto;
+  background-image: url('../img/main-bg.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.container {
+  /* максимальная ширина */
+  max-width: 1140px;
+  /* Выравниваем по центру */
+  margin: auto;
+}
+
+/* Стили для шапки */
+.header {
+  /* выравнивание по центру по вертикали */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* внутренний отступ сверху */
+  padding-top: 45px;
+  margin-bottom: 30%;
+}
+
+.logo {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  /* расширяем и делаем адаптивным форму поиска */
+  flex: 0.8;
+}
+
+.search-input {
+  /* расширяем и делаем адаптивным форму поиска */
+  flex: 1;
+  /* Фоновый цвет */
+  background: rgba(196, 196, 196, 0.5);
+  /* скругление */
+  border-radius: 5px;
+  /* отступ внутри сверху */
+  padding-top: 12px;
+  /* отступ внутри снизу */
+  padding-bottom: 12px;
+  /* отступы по краям */
+  padding-right: 18px;
+  padding-left: 18px;
+  border: none;
+  color: #AEAEAE;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #AEAEAE;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #AEAEAE;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #AEAEAE;
+}
+
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #AEAEAE;
+  opacity: 1;
+}
+
+.search-button {
+  /* делаем кнопку прозрачной */
+  background-color: transparent;
+  /* Убираем у кнопки границу */
+  border: none;
+  padding: 10 18px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  margin-left: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* object-fit свойство определяет как содержимое должно заполнять контейнер относительно его высоты и ширины */
+  object-fit: cover;
+}
+
+.title {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  line-height: 64px;
+  margin-bottom: 7px;
+}
+
+.title-en {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 23px;
+  color: #787878;
+  margin-bottom: 30px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 108px;
+}
+
+.movie-info {
+  display: flex;
+  align-items: center;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 19px;
+  color: #333333;
+  background: #FFFFFF;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin-right: 20px;
+}
+
+.country {
+  font-size: 16px;
+  line-height: 19px;
+  margin-right: 33px;
+}
+
+.play {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  list-style: 19px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* Создаем псевдоэлемент — это ключевое слово, добавляемое к селектору,
+которое позволяет стилизовать определённую часть выбранного элемента
+в нашем примере доболяем картинку перед селектором .play используя синтаксис: .play::before*/
+.play::before {
+  display: inline-block;
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/play.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  list-style: 19px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.more::after {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-image: url(../img/play.svg);
+  background-size: 100%;
+  margin-left: 15px;
+  /* поварачиваем кнопку play на 90 градусов */
+  transform: rotate(90deg);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border-radius: 3px;
+  color: #000000;
+  padding: 3% 4%;
+}
+
+.short-info {
+  margin-right: 3%;
+}
+
+.poster {
+  display: block;
+  margin-top: -40%;
+  margin-bottom: 20px;
+}
+
+.button {
+  background: #FF8F27;
+  padding: 10px 44px;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 16px;
+  border: none;
+}
+
+.actors-title {
+  padding-left: 15px;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 10px;
+}
+
+.actors-list {
+  margin: 0;
+  list-style: none;
+  padding-left: 15px;
+  text-decoration: underline;
+  line-height: 150%;
+}
+
+.full-info {
+  flex: 0.97;
+}
+
+.full-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tabs-content {
+  display: none;
+  margin-right: 70px;
+}
+
+.visible {
+  display: block;
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4%;
+}
+
+/* Задаем всем элементам в tabs-item margin-right, КРОМЕ последнего элемента */
+.tabs-item:not(:last-child) {
+  margin-right: 4%;
+}
+
+.tabs-item {
+  color: #000000;
+  text-decoration: none;
+  margin-right: 40px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.tabs-item-active {
+  color: #FF8F27
+}
+
+.text {
+  font-size: 16px;
+  line-height: 140%;
+  margin-top: 0;
+}
+
+.subscribe-title {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 14px;
+  margin-top: 0;
+}
+
+.subscribe-form {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.subscribe-input {
+  background: rgba(196, 196, 196, 0.5);
+  border-radius: 5px 0px 0px 5px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 18px;
+  padding-right: 18px;
+  border: none;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.subscribe-button {
+  background: #FF8F27;
+  border-radius: 0px 5px 5px 0px;
+  border: none;
+  padding: 12px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .tabs-item {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 740px;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+  }
+
+  .tabs-item {
+    flex-basis: 19%;
+    line-height: 2;
+  }
+
+  .full-content {
+    flex-wrap: wrap;
+  }
+
+  .tabs-content {
+    margin-bottom: 5%;
+  }
+
+  .text {
+    font-size: 14px;
+  }
+
+  .actors-list {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+
+  .more {
+    display: none;
+  }
+
+  .tabs-item {
+    flex-basis: 33%;
+  }
+
+  .tabs-content {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 578px) {
+  .container {
+    width: 90%;
+  }
+
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .search {
+    flex-basis: 100%;
+    order: 3;
+    margin-top: 5%;
+  }
+
+  .content {
+    flex-wrap: wrap;
+  }
+
+  .short-info {
+    margin-right: 0;
+  }
+
+  .actors-list, .actors-title {
+    display: none;
+  }
+
+  .movie-info {
+    flex-wrap: wrap;
+  }
+
+  .play {
+    flex-basis: 100%;
+    margin-top: 10%;
+  }
+
+  .button {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  .poster {
+    margin-top: -20%;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin-bottom: 10%;
+  }
+
+  .bookmark-added {
+    display: none;
+  }
+}
